@@ -8,12 +8,8 @@ const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const projects = [
-    { name: 'Website Redesign', client: 'Acme Corp', description: 'Complete redesign of the corporate website with modern UI/UX principles', progress: 75, status: 'active' },
-    { name: 'Mobile App Development', client: 'Tech Startup', description: 'Build a cross-platform mobile application for iOS and Android', progress: 45, status: 'active' },
-    { name: 'Brand Identity', client: 'Fashion Brand', description: 'Create a comprehensive brand identity including logo, colors, and guidelines', progress: 90, status: 'completed' },
-    { name: 'E-commerce Platform', client: 'Retail Co', description: 'Develop a scalable e-commerce platform with payment integration', progress: 30, status: 'pending' },
-    { name: 'Marketing Campaign', client: 'Local Business', description: 'Plan and execute a digital marketing campaign across multiple channels', progress: 60, status: 'active' },
-    { name: 'Data Analytics Dashboard', client: 'Enterprise Inc', description: 'Build a real-time analytics dashboard for business intelligence', progress: 85, status: 'active' },
+    { name: 'Website Redesign', client: 'Acme Corp', description: 'Complete redesign of the corporate website with modern UI/UX principles', status: 'Active' },
+    { name: 'Mobile App Development', client: 'Tech Startup', description: 'Build a cross-platform mobile application for iOS and Android', status: 'Active' },
   ];
 
   return (
