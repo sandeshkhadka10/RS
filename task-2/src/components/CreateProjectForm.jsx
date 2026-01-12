@@ -25,10 +25,10 @@ const CreateProjectForm = () => {
   const handleSubmit = () => {
     const newErrors = validateForm(formData);
     
-    // if there is no newErros then the field is valid
     if (Object.keys(newErrors).length === 0) {
       setSubmitted(true);
       console.log('Form submitted:', formData);
+      setTimeout(() => setSubmitted(false), 3000); // it will remove the submitted message after 3 sec
     } else {
       setErrors(newErrors);
     }
@@ -51,14 +51,14 @@ const CreateProjectForm = () => {
         <div className="bg-white rounded-xl shadow-xl p-8">
           
           <div className="mb-8">
-            <h1 className="text-3xl text-center font-bold text-gray-900 mb-2">Create New Project</h1>
-            <p className="text-gray-600 text-center">Fill in the project details below</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Create New Project</h1>
+            <p className="text-gray-600">Fill in the project details below</p>
           </div>
 
           {submitted && (
             <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-3">
-              <CheckCircle2 className="text-green-600" size={20} />
-              <span className="text-green-800 font-medium">Project created successfully!</span>
+              <CheckCircle2 className="text-green-600 text-center" size={20} />
+              <span className="text-green-800 font-medium text-center">Project created successfully!</span>
             </div>
           )}
 
