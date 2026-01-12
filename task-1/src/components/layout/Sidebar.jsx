@@ -38,7 +38,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           </div>
 
           {/* Navigation */}
-          <nav className="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
+          <nav className="flex-1 px-4 py-6 space-y-1">
             {menuItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeItem === item.id;
@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                   onClick={() => setActiveItem(item.id)}
                   className={`
                     w-full flex items-center space-x-3 px-4 py-3 rounded-lg
-                    transition-colors duration-150
+                    duration-150 cursor-pointer
                     ${isActive 
                       ? 'bg-blue-50 text-blue-600' 
                       : 'text-gray-700 hover:bg-gray-50'
