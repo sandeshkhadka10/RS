@@ -1,5 +1,3 @@
-// Validation helper functions
-
 export const validateProjectName = (name) => {
   if (!name.trim()) {
     return 'Project name is required';
