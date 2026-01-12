@@ -1,10 +1,10 @@
 import React from 'react'
-import './App.css'
+import CreateProjectForm from './components/createProjectForm'
 
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <CreateProjectForm/>
     </>
   )
 }
