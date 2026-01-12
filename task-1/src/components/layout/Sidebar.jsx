@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Search, Bell, User, Home, BarChart3, Users, Settings, FileText, Plus, Filter, Download, MoreVertical, Eye, Edit, Trash2 } from 'lucide-react';
+import { User, Home, BarChart3, Users, Settings, FileText } from 'lucide-react';
 
 // Sidebar Component
 const Sidebar = ({ isOpen, setIsOpen }) => {
@@ -8,9 +8,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   const menuItems = [
     { id: 'dashboard', icon: Home, label: 'Dashboard' },
     { id: 'analytics', icon: BarChart3, label: 'Analytics' },
-    { id: 'users', icon: Users, label: 'Users' },
-    { id: 'documents', icon: FileText, label: 'Documents' },
-    { id: 'settings', icon: Settings, label: 'Settings' },
   ];
 
   return (
@@ -18,7 +15,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       {/* Mobile overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-20 lg:hidden"
+          className="fixed inset-0 bg-white/40 backdrop-blur-md z-20"
           onClick={() => setIsOpen(false)}
         />
       )}
