@@ -25,10 +25,10 @@ const CreateProjectForm = () => {
   const handleSubmit = () => {
     const newErrors = validateForm(formData);
     
+    // if there is no newErros then the field is valid
     if (Object.keys(newErrors).length === 0) {
       setSubmitted(true);
       console.log('Form submitted:', formData);
-      setTimeout(() => setSubmitted(false), 3000);
     } else {
       setErrors(newErrors);
     }
@@ -51,8 +51,8 @@ const CreateProjectForm = () => {
         <div className="bg-white rounded-xl shadow-xl p-8">
           
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Create New Project</h1>
-            <p className="text-gray-600">Fill in the project details below</p>
+            <h1 className="text-3xl text-center font-bold text-gray-900 mb-2">Create New Project</h1>
+            <p className="text-gray-600 text-center">Fill in the project details below</p>
           </div>
 
           {submitted && (
