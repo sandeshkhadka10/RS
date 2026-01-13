@@ -1,11 +1,11 @@
 import React from "react";
-import Dashboard from "./pages/Dashboard";
+import Table from "./pages/Table";
 
 function App() {
  
   return (
     <>
-      <Dashboard/>
+      <Table/>
     </>
   )
 }
