@@ -8,16 +8,10 @@ const TableHeader = () => {
           Project Name
         </th>
         <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-          Client
-        </th>
-        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
           Status
         </th>
         <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
           Start Date
-        </th>
-        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-          Budget
         </th>
         <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
           Actions

@@ -39,18 +39,12 @@ const ProjectTableRow = ({ project }) => {
         <div className="text-sm font-medium text-gray-900">{project.name}</div>
       </td>
       <td className="px-6 py-4">
-        <div className="text-sm text-gray-600">{project.client}</div>
-      </td>
-      <td className="px-6 py-4">
         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusStyles(project.status)}`}>
           {getStatusText(project.status)}
         </span>
       </td>
       <td className="px-6 py-4">
         <div className="text-sm text-gray-600">{project.startDate}</div>
-      </td>
-      <td className="px-6 py-4">
-        <div className="text-sm font-medium text-gray-900">{project.budget}</div>
       </td>
       <td className="px-6 py-4">
         <div className="flex items-center gap-2">
