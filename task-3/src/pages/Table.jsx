@@ -1,8 +1,10 @@
 import React,{useState} from 'react';
+import Header from '../components/layout/Header';
+import TableHeader from '../components/layout/TableHeader';
+import ProjectTableRow from '../components/projects/ProjectTableRow';
 
 const Table = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const projects = [
     {
@@ -73,11 +75,9 @@ const Table = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
+       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <ActionBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        
         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
@@ -89,7 +89,6 @@ const Table = () => {
               </tbody>
             </table>
           </div>
-          <Pagination total={projects.length} />
         </div>
       </main>
     </div>

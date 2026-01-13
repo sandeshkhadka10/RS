@@ -1,24 +1,51 @@
 import React from 'react';
-import { Menu } from 'lucide-react';
+import { Search } from 'lucide-react';
 
-const Header = () => {
-  return (
-    <header className="bg-white border-b border-gray-200 px-6 py-4">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div>
-            <h1 className="text-2xl text-center font-bold text-gray-900">Projects Table</h1>
-            <p className="text-sm text-center text-gray-600">Manage and track all your projects in the table form</p>
-          </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold">
-            JD
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+const Header = ({ searchTerm, setSearchTerm }) => {
+    return (
+        <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+            <div className="flex items-center justify-between h-16 px-6">
+
+                {/* Left Section */}
+                <div>
+                    <h1 className="text-2xl font-bold text-gray-900">Projects Table</h1>
+                    <p className="text-sm text-gray-600">
+                        Manage and track all your projects in the table form
+                    </p>
+                </div>
+
+                {/* Right Section */}
+                <div className="flex items-center gap-4">
+
+                    {/* Search */}
+                    <div className="relative hidden md:block w-64">
+                        <Search
+                            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                            size={18}
+                        />
+                        <input
+                            type="text"
+                            placeholder="Search projects..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="w-full pl-9 pr-4 py-2 bg-gray-100 border border-transparent rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+
+                    {/* Actions */}
+                    <button className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+                        Filter
+                    </button>
+
+                    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        Add Project
+                    </button>
+                </div>
+
+            </div>
+        </header>
+
+    );
 };
 
 export default Header;
