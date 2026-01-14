@@ -5,7 +5,7 @@ const MetricCard = ({ title, value, change, icon: Icon, trend, color }) => {
   const isPositive = trend === 'up';
   
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg">
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <p className="text-sm font-medium text-gray-600 mb-1">{title}</p>
