@@ -9,7 +9,7 @@ const Button = ({ children, variant = 'primary', onClick }) => {
   
   return (
     <button
-      className={`px-4 py-2 rounded-lg font-medium transition-colors ${variants[variant]}`}
+      className={`px-4 py-2 rounded-lg font-medium ${variants[variant]}`}
       onClick={onClick}
     >
       {children}
