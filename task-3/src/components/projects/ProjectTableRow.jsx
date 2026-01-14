@@ -50,21 +50,21 @@ const ProjectTableRow = ({ project }) => {
         <div className="flex items-center gap-2">
           <button
             onClick={handleView}
-            className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+            className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
             title="View"
           >
             <Eye size={18} />
           </button>
           <button
             onClick={handleEdit}
-            className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg"
             title="Edit"
           >
             <Edit2 size={18} />
           </button>
           <button
             onClick={handleDelete}
-            className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+            className="p-2 text-red-600 hover:bg-red-50 rounded-lg"
             title="Delete"
           >
             <Trash2 size={18} />
