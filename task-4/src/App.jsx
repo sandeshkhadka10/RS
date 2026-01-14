@@ -1,8 +1,10 @@
+import React from 'react';
+import AnalyticsDashboard from './components/pages/AnalyticsDashboard';
 function App() {
 
   return (
     <>
-      <h1>Hello World</h1>
+      <AnalyticsDashboard/>
     </>
   )
 }
